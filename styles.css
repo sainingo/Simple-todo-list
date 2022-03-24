@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ramaraja&display=swap');
+body {
+    padding: o;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Satisfy', cursive;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'El Messiri', sans-serif;
+    text-decoration: underline;
+    color: #ddf507;
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.42);
+}
+
+.container {
+    border: 1px solid #dbd9d3;
+    width: 400px;
+    margin: 40px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(75,74,105);
+    background: linear-gradient(45deg, rgba(75,74,105,1) 0%, rgba(2,0,36,1) 2%, rgba(19,17,52,1) 8%, rgba(125,125,153,1) 34%, rgba(119,129,158,1) 40%, rgba(0,212,255,1) 75%);
+    box-shadow: 10px 10px 5px 0px rgba(179,144,144,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(179,144,144,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(179,144,144,0.75);
+    border-radius: 8px;
+    color: #f1f1f1;
+}
+
+.input {
+    font-family: 'Ramaraja', serif;
+    border: 1px solid #b0b891;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 1px 12px 25px 11px rgba(214,87,232,0.39);
+    -webkit-box-shadow: 1px 12px 25px 11px rgba(214,87,232,0.39);
+    -moz-box-shadow: 1px 12px 25px 11px rgba(214,87,232,0.39);
+}
+
+.input > input {
+    height: 30px;
+    width: 55%;
+    border-radius: 2px;
+    border: 1px solid #84aaf0;
+    font-size: 14px;
+    padding: 0 4px;
+}
+
+.input > button {
+    padding: 5px 6px;
+    margin-left: 8px;
+    border-radius: 4px;
+    border: 1px solid #cedede;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-transition: all 2.5s ease;
+    -moz-transition: all 2.5s ease;
+    -ms-transition: all 2.5s ease;
+    -o-transition: all 2.5s ease;
+    transition: all 1.5s ease;
+}
+
+.input > button:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+.to-do-list {
+    font-family: 'Sacramento', cursive;
+    font-size: 32px;
+    margin: 10px;
+    width: 80%;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.todo-items {
+    border: 1px solid #969296;
+    color: #ffffff;
+    border-radius: 2px;
+    margin: 12px 10px;
+    padding: 2px 4px;
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.42);
+    box-shadow: 0px 12px 11px -2px rgba(46,18,18,0.75);
+   -webkit-box-shadow: 0px 12px 11px -2px rgba(46,18,18,0.75);
+   -moz-box-shadow: 0px 12px 11px -2px rgba(46,18,18,0.75);
+   cursor: pointer;
+}
+
+.todo-items:hover {
+    color: #ddf507;
+    transition: transform .5s;
+    transform: scale(1.1);
+}
+
+/* .toggle-mode {
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-mode > img {
+    width: 3%;
+    height: 7%;
+    position: absolute;
+    right: 140px;
+    top: 10px;
+} */
