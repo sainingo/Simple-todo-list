@@ -4,7 +4,7 @@ const todoContainer = document.querySelector('.to-do-list');
 
 
 addButton.addEventListener('click', () => {
-    const todoValue = inputValue.value;
+    const todoValue = inputValue.value.toLowerCase();
     if(todoValue !== ''){
         const h3 = document.createElement('h3');
         h3.classList.add('todo-items');
@@ -12,7 +12,7 @@ addButton.addEventListener('click', () => {
         todoContainer.appendChild(h3);
         inputValue.value = '';
     } else {
-        alert('You need to enter a todo list');
+        alert('You need to Enter a Todo List');
     }
    
 })
