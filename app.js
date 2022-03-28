@@ -2,46 +2,38 @@ const addButton = document.querySelector('.add-todo');
 const inputValue = document.querySelector('.input-field');
 const todoContainer = document.querySelector('.to-do-list');
 
-const storeData = [];
-let storageData;
 
 addButton.addEventListener('click', () => {
-    const todoValue = inputValue.value.toLowerCase();
-    if(todoValue !== ''){  
-        const h3 = document.createElement('h3');
-        h3.classList.add('todo-items');
-        h3.textContent = todoValue;
-        todoContainer.appendChild(h3);
-        
-       
-    } else {
-        alert('You need to Enter a Todo List');
+ 
+    if(inputValue.value.trim() !== '') {
+        let localData = JSON.parse(localStorage.getItem('todos'));
+    if(localData === null) {
+        storeData = []
+    }else {
+       storeData = localData
     }
-    storeData.push(inputValue.value.toLowerCase());     
-    inputValue.value = '';
-    localStorage.setItem('todos', JSON.stringify(storeData));
-    // pageReload()
-    
+    storeData.push(inputValue.value)
+    localStorage.setItem('todos', JSON.stringify(storeData))
+    inputValue.value = ''
+    }
+    displayContent();
 })
-console.log(storeData);
 
-function pageReload() {
-        window.addEventListener('DOMContentLoaded', (event) => {
-            if(localStorage.getItem('todos') !== null) {
-            console.log('local contains some data');
-          const localData = JSON.parse(localStorage.getItem('todos')) 
-          localData.forEach((data) => {
-            const h3 = document.createElement('h3');
-            h3.classList.add('todo-items');
-            h3.textContent = data;
-            todoContainer.appendChild(h3);
-          }) 
-            
-        }else {
-            console.log('No Data found');
-        }
-        });
-   
+
+function displayContent() {
+    let output = '';
+    let localData = JSON.parse(localStorage.getItem('todos'));
+   if(localData !== null) {
+    localData.forEach((data) =>  {
+        output += `
+        <h3 class="todo-items" >${data} </h3>
+        `
+        todoContainer.innerHTML = output;
+    });
+   }else {
+       console.log('No data found');
+   }
 }
 
-pageReload()
+displayContent()
+
